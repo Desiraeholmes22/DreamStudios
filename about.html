@@ -225,6 +225,16 @@
     document.addEventListener('click', enableAudio);
   });
 </script>
+    
+<script>
+  window.addEventListener('load', () => {
+    const bgMusic = document.getElementById('bg-music');
+    bgMusic.muted = false; // optional, if you want it to play with sound
+    bgMusic.play().catch(error => {
+      console.warn("Autoplay was prevented:", error);
+    });
+  });
+</script>
 
       <h1>Welcome to Dream Studios: Code Playground</h1>
     <div class="container">
